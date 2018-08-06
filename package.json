@@ -1,0 +1,21 @@
+{
+  "name": "badge-icon",
+  "version": "0.1.0",
+  "license": "MIT",
+  "scripts": {
+    "test": "node -r babel-register -r babel-polyfill test.js"
+  },
+  "dependencies": {
+    "sharp": "^0.20.5",
+    "svg.js": "^2.6.5",
+    "svgdom": "^0.0.15"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint-plugin-html": "^4.0.5",
+    "standard": "^11.0.1",
+    "yarn-upgrade-all": "^0.3.0"
+  }
+}
