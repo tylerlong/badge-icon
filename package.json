@@ -6,9 +6,7 @@
     "test": "node -r babel-register -r babel-polyfill test.js"
   },
   "dependencies": {
-    "sharp": "^0.20.5",
-    "svg.js": "^2.6.5",
-    "svgdom": "^0.0.15"
+    "sharp": "^0.20.5"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",

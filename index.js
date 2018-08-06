@@ -1,5 +1,3 @@
-import SVG from 'svg.js'
-import svgdom from 'svgdom'
 import sharp from 'sharp'
 
 class BadgeIcon {
@@ -20,23 +18,27 @@ class BadgeIcon {
   }
 
   svg () {
-    const draw = SVG(svgdom)(svgdom.document.documentElement).clear().size(this.badgeWidth, this.badgeHeight)
-
-    draw.ellipse(this.badgeWidth, this.badgeHeight).fill(this.bgColor)
-
-    draw.text(t => {
-      t.tspan(this.text)
-        .attr('x', '50%')
-        .attr('y', '50%')
-        .attr('alignment-baseline', 'central')
-    }).fill(this.color)
-      .attr('x', '50%')
-      .attr('y', '50%')
-      .attr('text-anchor', 'middle')
-      .attr('dominant-baseline', 'central')
-      .font('size', this.fontSize + 'px')
-
-    return draw.svg()
+    return `
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="${this.badgeWidth}" height="${this.badgeHeight}">
+      <ellipse
+        rx="${this.badgeWidth / 2}"
+        ry="${this.badgeHeight / 2}"
+        cx="${this.badgeWidth / 2}"
+        cy="${this.badgeHeight / 2}"
+        fill="${this.bgColor}">
+      </ellipse>
+      <text
+        x="50%"
+        y="50%"
+        text-anchor="middle"
+        dominant-baseline="central"
+        fill="${this.color}"
+        font-size="${this.fontSize}px"
+        font-family="Helvetica, Arial, sans-serif">
+        <tspan x="50%" y="50%" alignment-baseline="central">${this.text}</tspan>
+      </text>
+    </svg>
+`.trim()
   }
 
   png () {
