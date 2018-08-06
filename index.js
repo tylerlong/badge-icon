@@ -1,5 +1,6 @@
 import SVG from 'svg.js'
 import svgdom from 'svgdom'
+import sharp from 'sharp'
 
 class BadgeIcon {
   constructor ({
@@ -27,7 +28,7 @@ class BadgeIcon {
       t.tspan(this.text)
         .attr('x', '50%')
         .attr('y', '50%')
-        .attr('dominant-baseline', 'central')
+        .attr('alignment-baseline', 'central')
     }).fill(this.color)
       .attr('x', '50%')
       .attr('y', '50%')
@@ -36,6 +37,10 @@ class BadgeIcon {
       .font('size', this.fontSize + 'px')
 
     return draw.svg()
+  }
+
+  png () {
+    return sharp(Buffer.from(this.svg())).png().toBuffer()
   }
 }
 

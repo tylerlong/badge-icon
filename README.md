@@ -1,6 +1,6 @@
 # badge-icon
 
-Create badge icon
+Create badge icon image
 
 
 ## Why?
