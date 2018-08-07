@@ -1,11 +1,15 @@
 # badge-icon
 
+[![npm version](https://badge.fury.io/js/badge-icon.svg)](https://badge.fury.io/js/badge-icon)
+
 Create badge icon image
+
+![8](./8.svg) ![66](./66.svg) ![99+](./99+.svg)
 
 
 ## Why?
 
-I want to set badge icon to a electron based Windows app. First of all I need to create such an icon, then invoke `setOverlayIcon` of `BrowserWindow`:
+I want to set badge icon to an electron based Windows app. First of all I need to create such an icon, then invoke `setOverlayIcon` of `BrowserWindow`:
 
 ```js
 // todo: create the badge icon image
