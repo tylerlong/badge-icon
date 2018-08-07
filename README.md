@@ -28,6 +28,12 @@ yarn add badge-icon
 import BadgeIcon from 'badge-icon'
 ```
 
+Or you include it in your web page directly:
+
+```html
+<script src="https://unpkg.com/badge-icon@0.1.0/dist/badge-icon.js"></script>
+```
+
 
 
 ## Samples
