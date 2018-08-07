@@ -2,16 +2,20 @@
   "name": "badge-icon",
   "version": "0.1.0",
   "license": "MIT",
+  "main": "dist/badge-icon.js",
+  "module": "index.js",
   "scripts": {
-    "test": "node -r babel-register -r babel-polyfill test.js"
+    "test": "node -r babel-register -r babel-polyfill test.js",
+    "release": "webpack --progress --colors"
   },
-  "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "eslint-plugin-html": "^4.0.5",
     "standard": "^11.0.1",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0",
     "yarn-upgrade-all": "^0.3.0"
   }
 }
