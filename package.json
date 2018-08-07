@@ -5,9 +5,7 @@
   "scripts": {
     "test": "node -r babel-register -r babel-polyfill test.js"
   },
-  "dependencies": {
-    "sharp": "^0.20.5"
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-polyfill": "^6.26.0",

@@ -74,7 +74,3 @@ fs.writeFileSync('99+.svg', icon99Plus.svg())
 ```
 
 ![99+](./99+.svg)
-
-
-## Generate png image
-

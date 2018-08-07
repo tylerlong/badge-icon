@@ -1,5 +1,3 @@
-import sharp from 'sharp'
-
 class BadgeIcon {
   constructor ({
     badgeWidth = 128, // badge width
@@ -39,10 +37,6 @@ class BadgeIcon {
       </text>
     </svg>
 `.trim()
-  }
-
-  png () {
-    return sharp(Buffer.from(this.svg())).png().toBuffer()
   }
 }
 
